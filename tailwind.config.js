@@ -1,6 +1,10 @@
+
 /** @type {import('tailwindcss').Config} */
-export default {
- content: [
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+module.exports = {
+  darkMode: ['class'],
+  content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
@@ -41,6 +45,7 @@ export default {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+
       },
       keyframes: {
         'accordion-down': {
@@ -58,5 +63,5 @@ export default {
       },
     },
   },
-  plugins: [import('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate')],
 };
